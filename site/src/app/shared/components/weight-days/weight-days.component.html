@@ -1,0 +1,51 @@
+<div>
+  <h4 class="d-flex justify-content-center mt-4">Registro de peso</h4>
+
+  <div class="d-flex justify-content-center mt-4">
+    <ngx-charts-bar-vertical
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="chartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      xAxisLabel="Fecha"
+      yAxisLabel="Peso"
+    ></ngx-charts-bar-vertical>
+  </div>
+
+  <table class="weight-table mt-2">
+    <thead>
+      <tr>
+        <th class="text-center">Fecha</th>
+        <th class="text-center">Peso</th>
+        <th class="text-center">
+          <button class="btn btn-success add-btn" (click)="openNewWeightDayComponent()">
+            <i class="fas fa-plus"></i>
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let weightDay of weightDays">
+        <td class="text-center">
+          <i class="far fa-calendar-alt"></i> {{ weightDay.date }}
+        </td>
+        <td class="text-center">
+          <i class="fas fa-weight"></i> {{ weightDay.weight }} kg
+        </td>
+        <td class="text-center width-25">
+          <button class="btn btn-primary me-2 btn-editar" (click)="editWeightDay(weightDay)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn btn-danger btn-eliminar" (click)="deleteWeightDay(weightDay)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

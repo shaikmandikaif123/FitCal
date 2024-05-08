@@ -1,0 +1,38 @@
+.beautiful-card {
+  border: 1px solid #a8c4cc;
+  padding: 25px 10px 25px 20px;
+  border-radius: 5px;
+  background-color: #A8CCC9;
+  // background-color: var(--card-background-color);
+  color: var(--card-color);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+
+.thick-row {
+  border-top: 2px solid #000;
+}
+
+.table tbody tr.meal-breakfast {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.table tbody tr.meal-lunch {
+  background-color: white;
+}
+
+.table tbody tr.meal-dinner {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.table tbody tr.meal-snacks {
+  background-color: white;
+}
+
+.positive-grams {
+  color: green;
+}
+
+.negative-grams {
+  color: red;
+}

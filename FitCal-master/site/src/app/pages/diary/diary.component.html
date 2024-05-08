@@ -1,0 +1,28 @@
+<app-fecha #appFecha (diaIncrementado)="onDiaIncrementado($event)" (diaDecrementado)="onDiaDecrementado($event)"></app-fecha>
+<div class="main-content">
+  <main class="beautiful-card m-5 p-5 row">
+    <app-meal class="col-12 col-lg-6 responsive-flex mb-5" [meal]="'Desayuno'" [foods]="getMealFoods('BREAKFAST')" [mealCalories]="getTotalCalories('BREAKFAST')"></app-meal>
+    <app-meal class="col-12 col-lg-6 responsive-flex mb-5" [meal]="'Comida'" [foods]="getMealFoods('LUNCH')" [mealCalories]="getTotalCalories('LUNCH')"></app-meal>
+    <hr>
+    <app-meal class="col-12 col-lg-6 responsive-flex mt-5" [meal]="'Cena'" [foods]="getMealFoods('DINNER')" [mealCalories]="getTotalCalories('DINNER')"></app-meal>
+    <app-meal class="col-12 col-lg-6 responsive-flex mt-5" [meal]="'Snacks'" [foods]="getMealFoods('SNACKS')" [mealCalories]="getTotalCalories('SNACKS')"></app-meal>
+  </main>
+</div>
+
+<div class="half-circle-container">
+  <button mat-mini-fab class="half-circle center">
+    <span class="top">Calorías totales</span>
+    <span class="bottom">{{leftCalories + caloriasConsumidas}}</span>
+  </button>
+
+  <button mat-mini-fab class="half-circle right">
+    <span class="top">Calorías consumidas</span>
+    <span class="bottom">{{caloriasConsumidas}}</span>
+  </button>
+
+  <button mat-mini-fab class="half-circle left">
+    <span class="top">Calorías restantes</span>
+    <span class="bottom">{{leftCalories}}</span>
+  </button>
+
+</div>

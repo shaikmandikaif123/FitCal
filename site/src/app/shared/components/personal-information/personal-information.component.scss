@@ -1,0 +1,60 @@
+.fixed-width {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h5 {
+  padding-top: 4px;
+}
+
+h4 {
+  margin-left: 12px;
+  width: 80px;
+}
+
+.btn {
+  padding: 4px 8px;
+  margin: 2px 4px;
+}
+
+.btn-primary {
+  margin-right: 95px;
+}
+
+.content-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.input-group {
+  width: auto;
+}
+
+input {
+  max-width: 100px;
+  text-align: right;
+}
+
+.personal-information .negative-input {
+  color: red;
+}
+
+.data-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.negative-input {
+  color: red;
+}
+
+button.btn-primary {
+  background-color: #DCEAB2;
+  border-color: #DCEAB2;
+  color: black;
+}

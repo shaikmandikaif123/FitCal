@@ -1,0 +1,21 @@
+<div class="fixed-width d-flex justify-content-center">
+  <h5>{{ data }}</h5>
+  <div class="content-right">
+    <div class="data-container">
+      <h5 *ngIf="!editData">{{ mainData }} {{ type }}</h5>
+      <div *ngIf="editData" class="input-group">
+        <input
+          type="number"
+          class="form-control form-control-sm"
+          [(ngModel)]="newData"
+          [ngClass]="{ 'negative-input': (data === 'Height:' || data === 'Weight:') && newData< 0 }"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-success" (click)="saveData()">Save</button>
+          <button class="btn btn-danger" (click)="cancelData()">Cancel</button>
+        </div>
+      </div>
+      <button class="btn btn-primary" *ngIf="!editData" (click)="editData = true">Edit</button>
+    </div>
+  </div>
+</div>

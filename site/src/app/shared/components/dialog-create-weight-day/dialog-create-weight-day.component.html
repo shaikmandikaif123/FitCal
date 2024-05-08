@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>{{ data ? 'Editar peso la fecha:' : 'Añadir peso de la fecha:' }}</h2>
+<div mat-dialog-content>
+  <form>
+    <mat-form-field>
+      <mat-label>Peso</mat-label>
+      <input matInput type="number" [(ngModel)]="weightDay.weight" name="weight" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Fecha</mat-label>
+      <input matInput [matDatepicker]="datePicker" [(ngModel)]="weightDay.date" name="date" required>
+      <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+      <mat-datepicker #datePicker></mat-datepicker>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="saveWeightDay()" [disabled]="!weightDay.weight || !weightDay.date">
+    {{ data ? 'Guardar' : 'Crear' }}
+  </button>
+</div>
